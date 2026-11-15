@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Interactive beginner learning lab for Deployment and DevOps Fundamentals.">
+<title>DevOps Learning Lab | Interactive Practice</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+ <div class="brand"><div class="brandmark">⌘</div><span>DevOps <span style="color:#a04fca">Learning Lab</span></span></div>
+ <div class="topright"><span class="hide-mobile">Deployment and DevOps Fundamentals</span><span class="pill" id="topProgress">0% completed</span></div>
+</header>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="side-label">LEARNING SPACE</div>
+  <button class="navbtn active" id="navHome" onclick="showHome()"><span class="navicon">⌂</span> Dashboard</button>
+  <div class="side-label">COURSE MODULES</div>
+  <div id="sideModules"></div>
+  <div class="side-label">YOUR WORK</div>
+  <button class="navbtn" onclick="showReference()"><span class="navicon">⌘</span> Command reference</button>
+  <button class="navbtn" onclick="openReset()"><span class="navicon">↻</span> Reset progress</button>
+  <div class="side-progress">
+   <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:800"><span>Course progress</span><span id="sidePct">0%</span></div>
+   <div class="progressline"><span id="sideBar"></span></div>
+   <div style="font-size:10px;color:#8b7b9c" id="sideCount">0 challenges completed</div>
+  </div>
+ </aside>
+ <main class="main" id="main"></main>
+</div>
+<div class="modalback" id="resetModal"><div class="modal"><h2>Reset learning progress?</h2><p>This clears completed challenge records and submitted answers held in the current browser session. Your course content will remain available.</p><div class="modalactions"><button class="secondary" onclick="closeReset()">Cancel</button><button class="primary" onclick="resetProgress()">Reset progress</button></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
